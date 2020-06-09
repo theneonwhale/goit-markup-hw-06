@@ -62,7 +62,7 @@
           <span>Эффективные решения</span>
           <span>для вашего бизнеса</span>
         </h1>
-        <button class="button" data-open-modal>Заказать услугу</button>
+        <button class="button" data-modal-open>Заказать услугу</button>
       </section>
       <!-- Advantages -->
       <section class="advantages">
@@ -529,34 +529,67 @@
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
     <!-- Modal -->
-    <div class="backdrop is-hidden" data-backdrop>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p>
+        <b>
           Оставьте свои данные, мы вам перезвоним
-        </p>
-        <button class="button" data-close-modal>Закрыть</button>
+        </b>
+        <form class="js-speaker-form">
+          <div class="form-field">
+            <label for="name" class="form-label">Name</label>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Имя"
+            />
+          </div>
+          <div class="form-field">
+            <label for="tel" class="form-label">Tel</label>
+            <input
+              class="form-input"
+              type="text"
+              name="tel"
+              id="tel"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="form-field">
+            <label for="email" class="form-label">e-mail</label>
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Почта"
+            />
+          </div>
+          <div class="form-field">
+            <label for="comment" class="form-label">Комментарий</label>
+            <textarea
+              class="form-input"
+              name="comment"
+              id="comment"
+              cols="40"
+              rows="5"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
+          <div role="policy">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy" class="form-label">
+              Согласен с рассылкой и принимаю Условия договора
+            </label>
+          </div>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+
+        <button class="button" data-modal-close>Закрыть</button>
       </div>
     </div>
     <!-- Scripts -->
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
-    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
