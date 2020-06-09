@@ -183,19 +183,6 @@ studio #212121
     color 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
 
-.hero .button {
-  animation: btn-trembling 250ms linear infinite;
-}
-
-@keyframes btn-trembling {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-3px);
-  }
-}
-
 .footer .button {
   font-weight: 900;
 }
@@ -374,28 +361,6 @@ button {
   overflow: hidden;
 }
 
-.nav .link::before {
-  display: block;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  content: '';
-  background-image: url(https://img.icons8.com/color/48/000000/princess-bubblegum.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translate(-50%, 150%);
-  opacity: 0;
-  transition: opacity 250ms var(--timing-function),
-    transform 250ms var(--timing-function);
-}
-
-.nav .link:hover::before {
-  transform: translate(-50%, 0);
-  opacity: 1;
-}
-
 .nav .link::after {
   display: block;
   content: '';
@@ -572,30 +537,6 @@ button {
   text-align: center;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100px;
-  height: 200px;
-  margin-left: 0;
-  background-image: url(../images/main/back/jake.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
-  animation: trembling 250ms linear infinite;
-}
-
-@keyframes trembling {
-  0% {
-    transform: translate(-50%, 0);
-  }
-  100% {
-    transform: translate(-50%, -3px);
-  }
-}
-
 .hero-title {
   display: flex;
   flex-direction: column;
@@ -608,50 +549,6 @@ button {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-/* Modal */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-modal-overlay-color);
-  z-index: 98;
-
-  opacity: 1;
-  transition: opacity 250ms var(--timing-function);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  min-height: 581px;
-  min-width: 528px;
-  padding: 40px;
-
-  background-color: var(--bg-modal-color);
-  color: var(--primary-black-color);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-
-  z-index: 99;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function),
-    opacity 250ms var(--timing-function);
 }
 
 /* Main */
@@ -884,42 +781,6 @@ button {
   text-align: center;
 }
 
-/* Team flip */
-.flip-body {
-  position: relative;
-  width: 270px;
-  height: 260px;
-  transition: all 250ms var(--timing-function);
-  transform-style: preserve-3d;
-}
-
-.flip-front,
-.flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flip-front {
-  z-index: 2;
-  transform: rotateY(0deg);
-
-  backface-visibility: hidden;
-}
-
-.flip-back {
-  transform: rotateY(-180deg);
-}
-
-.flip:hover .flip-body {
-  transform: rotateY(-180deg);
-}
-
 /* Customers */
 .customers.container {
   padding-top: 94px;
@@ -982,44 +843,6 @@ button {
 .portfolio .container {
   padding-top: 93px;
   padding-bottom: 94px;
-  position: relative;
-}
-.peppermint-container {
-  position: absolute;
-  width: 90px;
-  height: 130px;
-  transform: translate(1150%, -400%);
-  z-index: 3;
-  animation: drop 6000ms linear forwards;
-}
-
-.peppermint-container::after {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100px;
-  content: '';
-  background-image: url(../images/svg/watching.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transform: translate(-85%, -40%);
-  transition: opacity 1500ms var(--timing-function);
-}
-
-.peppermint-container:hover::after {
-  opacity: 1;
-}
-
-@keyframes drop {
-  0% {
-    transform: translate(1150%, -400%);
-  }
-  100% {
-    transform: translate(1150%, 1150%);
-  }
 }
 
 /* Portfolio title */
@@ -1168,4 +991,48 @@ button {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-modal-overlay-color);
+  z-index: 98;
+
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-height: 581px;
+  min-width: 528px;
+  padding: 40px;
+
+  background-color: var(--bg-modal-color);
+  color: var(--primary-black-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+
+  z-index: 99;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
