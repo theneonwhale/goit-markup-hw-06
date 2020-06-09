@@ -62,16 +62,7 @@
           <span>Эффективные решения</span>
           <span>для вашего бизнеса</span>
         </h1>
-        <!-- <a href="" class="button link" data-open-modal>Заказать услугу</a> -->
         <button class="button" data-open-modal>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-backdrop>
-          <div class="modal">
-            <p>
-              Оставьте свои данные, мы вам перезвоним
-            </p>
-            <button class="button" data-close-modal>Закрыть</button>
-          </div>
-        </div>
       </section>
       <!-- Advantages -->
       <section class="advantages">
@@ -171,28 +162,13 @@
           <h2 class="title">Наша команда</h2>
           <ul class="list">
             <li class="team-item">
-              <div class="flip">
-                <div class="flip-body">
-                  <div class="flip-front">
-                    <img
-                      src="./images/main/john-smith.jpg"
-                      width="270"
-                      height="260"
-                      alt="Джон Смит"
-                      class="img"
-                    />
-                  </div>
-                  <div class="flip-back">
-                    <img
-                      src="./images/main/back/at4.jpg"
-                      width="270"
-                      height="260"
-                      alt="Джейк"
-                      class="img"
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                src="./images/main/john-smith.jpg"
+                width="270"
+                height="260"
+                alt="Джон Смит"
+                class="img"
+              />
               <div class="team-content">
                 <h3 class="item">John Smith</h3>
                 <p class="text">Product Designer</p>
@@ -247,28 +223,13 @@
               </div>
             </li>
             <li class="team-item">
-              <div class="flip">
-                <div class="flip-body">
-                  <div class="flip-front">
-                    <img
-                      src="./images/main/marta-stewart.jpg"
-                      width="270"
-                      height="260"
-                      alt="Марта Стюарт"
-                      class="img"
-                    />
-                  </div>
-                  <div class="flip-back">
-                    <img
-                      src="./images/main/back/at3.jpg"
-                      width="270"
-                      height="260"
-                      alt="Финн"
-                      class="img"
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                src="./images/main/marta-stewart.jpg"
+                width="270"
+                height="260"
+                alt="Марта Стюарт"
+                class="img"
+              />
               <div class="team-content">
                 <h3 class="item">Marta Stewart</h3>
                 <p class="text">Frontend Developer</p>
@@ -323,28 +284,13 @@
               </div>
             </li>
             <li class="team-item">
-              <div class="flip">
-                <div class="flip-body">
-                  <div class="flip-front">
-                    <img
-                      src="./images/main/robert-jakis.jpg"
-                      width="270"
-                      height="260"
-                      alt="Роберт Джекис"
-                      class="img"
-                    />
-                  </div>
-                  <div class="flip-back">
-                    <img
-                      src="./images/main/back/at1.jpg"
-                      width="270"
-                      height="260"
-                      alt="Принцесса Пупырка"
-                      class="img"
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                src="./images/main/robert-jakis.jpg"
+                width="270"
+                height="260"
+                alt="Роберт Джекис"
+                class="img"
+              />
               <div class="team-content">
                 <h3 class="item">Robert Jakis</h3>
                 <p class="text">Marketing</p>
@@ -399,28 +345,13 @@
               </div>
             </li>
             <li class="team-item">
-              <div class="flip">
-                <div class="flip-body">
-                  <div class="flip-front">
-                    <img
-                      src="./images/main/martin-doe.jpg"
-                      width="270"
-                      height="260"
-                      alt="Мартин Доу"
-                      class="img"
-                    />
-                  </div>
-                  <div class="flip-back">
-                    <img
-                      src="./images/main/back/at2.jpg"
-                      width="270"
-                      height="260"
-                      alt="Бимо"
-                      class="img"
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                src="./images/main/martin-doe.jpg"
+                width="270"
+                height="260"
+                alt="Мартин Доу"
+                class="img"
+              />
               <div class="team-content">
                 <h3 class="item">Martin Doe</h3>
                 <p class="text">UI Designer</p>
@@ -597,6 +528,16 @@
       <!-- Copyright -->
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <p>
+          Оставьте свои данные, мы вам перезвоним
+        </p>
+        <button class="button" data-close-modal>Закрыть</button>
+      </div>
+    </div>
+    <!-- Scripts -->
     <script>
       const refs = {
         openModalBtn: document.querySelector('[data-open-modal]'),
