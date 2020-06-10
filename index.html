@@ -531,10 +531,10 @@
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <b>
+        <b class="modal-title">
           Оставьте свои данные, мы вам перезвоним
         </b>
-        <form class="js-speaker-form">
+        <form class="form js-services-form">
           <div class="form-field">
             <label for="name" class="form-label">Name</label>
             <input
@@ -571,13 +571,13 @@
               class="form-input"
               name="comment"
               id="comment"
-              cols="40"
+              cols="45"
               rows="5"
               placeholder="Комментарий"
             ></textarea>
           </div>
-          <div role="policy">
-            <input type="checkbox" name="policy" id="policy" />
+          <div class="policy">
+            <input type="checkbox" name="policy" id="policy" class="checkbox" />
             <label for="policy" class="form-label">
               Согласен с рассылкой и принимаю Условия договора
             </label>
