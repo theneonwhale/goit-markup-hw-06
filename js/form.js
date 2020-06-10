@@ -1,5 +1,5 @@
 (() => {
-  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+  document.querySelector('.js-services-form').addEventListener('submit', e => {
     e.preventDefault();
 
     new FormData(e.currentTarget).forEach((value, name) =>
