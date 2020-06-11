@@ -512,8 +512,15 @@
         <!-- Subscribe -->
         <div class="subscribe">
           <b class="action">Подписаться на рассылку</b>
-          <div>
-            <a href="" class="button link">
+          <form class="subscribe-form">
+            <input
+              type="email"
+              name="email-subscribe"
+              id="email-subscribe"
+              placeholder="E-mail"
+              class="email-subscribe"
+            />
+            <button href="" class="button">
               Подписаться
               <svg class="icon-airplane-one" width="24" height="24">
                 <use href="./images/svg/sprite.svg#icon-airplane"></use>
@@ -521,8 +528,8 @@
               <svg class="icon-airplane-two" width="24" height="24">
                 <use href="./images/svg/sprite.svg#icon-airplane"></use>
               </svg>
-            </a>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
       <!-- Copyright -->
@@ -583,8 +590,11 @@
           </div>
           <button type="submit" class="button">Отправить</button>
         </form>
-
-        <button class="button" data-modal-close>Закрыть</button>
+        <button class="button-close" data-modal-close>
+          <svg class="icon-modal-close" width="11" height="11">
+            <use href="./images/svg/modal-sprite.svg#icon-modal-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <!-- Scripts -->
