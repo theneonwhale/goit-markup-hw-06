@@ -1084,20 +1084,14 @@ button {
 .form-field {
   position: relative;
   width: 448px;
+  margin-bottom: 28px;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
 }
-.form-field:nth-child(-n + 3) {
-  margin-bottom: 28px;
-}
-.form-field:nth-child(4) {
-  margin-bottom: 20px;
-  /* flex-direction: column;
-  align-items: flex-start; */
-}
+
 .form-input {
   width: 100%;
   padding-top: 12px;
@@ -1123,19 +1117,6 @@ button {
     color 250ms var(--timing-function);
 }
 
-.form-label-comment {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  color: var(--primary-text-color);
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  color: var(--accent-color);
-  transform: translate(-25px, -250%);
-}
-
 .icon-modal {
   display: inline-block;
   position: absolute;
@@ -1145,14 +1126,58 @@ button {
   transform: translateY(-50%);
   transition: fill 250ms var(--timing-function);
 }
-.form-input:focus ~ .icon-modal,
-.form-input:not(:placeholder-shown) ~ .icon-modal {
+
+.form-field:focus-within > .form-label {
+  color: var(--accent-color);
+  transform: translate(-25px, -250%);
+}
+.form-field:focus-within > .icon-modal {
   fill: var(--accent-color);
 }
 
-.form-input:placeholder-shown {
+.form-input:not(:placeholder-shown) + .form-label {
+  color: var(--accent-color);
+  transform: translate(-25px, -250%);
+}
+.form-input:not(:placeholder-shown) ~ .icon-modal,
+.form-input:focus ~ .icon-modal {
+  fill: var(--accent-color);
 }
 
+.comment-field {
+  position: relative;
+  width: 448px;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+.comment-input {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 16px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
+}
+.comment-label {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: var(--primary-text-color);
+  transform: translateY(-260%);
+  transition: transform 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+}
+.comment-field:focus-within > .comment-label {
+  color: var(--accent-color);
+  transform: translateY(-460%);
+}
 .policy {
   display: flex;
   align-items: center;
