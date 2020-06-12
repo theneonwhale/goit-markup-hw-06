@@ -541,50 +541,62 @@
         <b class="modal-title">
           Оставьте свои данные, мы вам перезвоним
         </b>
-        <form class="form js-services-form">
+        <form class="form js-services-form" autocomplete="off">
           <div class="form-field">
-            <label for="name" class="form-label">Name</label>
             <input
               class="form-input"
               type="text"
               name="name"
               id="name"
-              placeholder="Имя"
+              placeholder=" "
+              autocomplete="off"
             />
+            <label for="name" class="form-label">Имя</label>
+            <svg class="icon-modal" width="12" height="12">
+              <use href="./images/svg/modal-sprite.svg#icon-modal-name"></use>
+            </svg>
           </div>
           <div class="form-field">
-            <label for="tel" class="form-label">Tel</label>
             <input
               class="form-input"
               type="text"
               name="tel"
               id="tel"
-              placeholder="Телефон"
+              placeholder=" "
             />
+            <label for="tel" class="form-label">Телефон</label>
+            <svg class="icon-modal" width="13" height="13">
+              <use href="./images/svg/modal-sprite.svg#icon-modal-phone"></use>
+            </svg>
           </div>
           <div class="form-field">
-            <label for="email" class="form-label">e-mail</label>
             <input
               class="form-input"
               type="email"
               name="email"
               id="email"
-              placeholder="Почта"
+              placeholder=" "
             />
+            <label for="email" class="form-label">Почта</label>
+            <svg class="icon-modal" width="15" height="12">
+              <use
+                href="./images/svg/modal-sprite.svg#icon-modal-envelope"
+              ></use>
+            </svg>
           </div>
           <div class="form-field">
-            <label for="comment" class="form-label">Комментарий</label>
             <textarea
               class="form-input"
               name="comment"
               id="comment"
               rows="5"
-              placeholder="Комментарий"
+              placeholder=" "
             ></textarea>
+            <label for="comment" class="form-label-comment">Комментарий</label>
           </div>
           <div class="policy">
             <input type="checkbox" name="policy" id="policy" class="checkbox" />
-            <label for="policy" class="form-label">
+            <label for="policy" class="policy-label">
               Согласен с рассылкой и принимаю Условия договора
             </label>
           </div>
