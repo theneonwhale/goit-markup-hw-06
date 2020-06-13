@@ -545,15 +545,15 @@
           <label class="form-field">
             <input class="form-input" type="text" name="name" placeholder=" " />
             <span class="form-label">Имя</span>
-            <svg class="icon-modal" width="12" height="12">
-              <use href="./images/svg/modal-sprite.svg#icon-modal-name"></use>
+            <svg class="icon-modal" width="18" height="18">
+              <use href="./images/svg/modal-sprite.svg#icon-modal-person"></use>
             </svg>
           </label>
 
           <label class="form-field">
             <input class="form-input" type="tel" name="tel" placeholder=" " />
             <span class="form-label">Телефон</span>
-            <svg class="icon-modal" width="13" height="13">
+            <svg class="icon-modal" width="18" height="18">
               <use href="./images/svg/modal-sprite.svg#icon-modal-phone"></use>
             </svg>
           </label>
@@ -565,10 +565,8 @@
               placeholder=" "
             />
             <span class="form-label">Почта</span>
-            <svg class="icon-modal" width="15" height="12">
-              <use
-                href="./images/svg/modal-sprite.svg#icon-modal-envelope"
-              ></use>
+            <svg class="icon-modal" width="18" height="18">
+              <use href="./images/svg/modal-sprite.svg#icon-modal-email"></use>
             </svg>
           </label>
           <label class="comment-field">
@@ -580,16 +578,23 @@
             ></textarea>
             <span class="comment-label">Комментарий</span>
           </label>
-          <div class="policy">
-            <input type="checkbox" name="policy" id="policy" class="checkbox" />
-            <label for="policy" class="policy-label">
-              Согласен с рассылкой и принимаю Условия договора
-            </label>
-          </div>
+          <label class="policy">
+            <input type="checkbox" name="policy" class="checkbox" />
+            <span class="icon-modal-checkbox"></span>
+            <span class="policy-label"
+              >Соглашаюсь с рассылкой и принимаю
+              <a
+                href="./doc/gunter.jpg"
+                download="Условия договора"
+                class="policy-agreement"
+                >Условия договора</a
+              ></span
+            >
+          </label>
           <button type="submit" class="button">Отправить</button>
         </form>
         <button class="button-close" data-modal-close>
-          <svg class="icon-modal-close" width="11" height="11">
+          <svg class="icon-modal-close" width="18" height="18">
             <use href="./images/svg/modal-sprite.svg#icon-modal-close"></use>
           </svg>
         </button>
