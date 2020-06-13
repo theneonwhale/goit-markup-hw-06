@@ -452,8 +452,6 @@ button {
 
 .social {
   min-width: 206px;
-  /* margin-left: 70px;
-  margin-right: 94px; */
 }
 
 .social .list {
@@ -493,9 +491,11 @@ button {
 .subscribe {
   display: block;
 }
+
 .subscribe-form {
   display: flex;
 }
+
 .email-subscribe {
   display: block;
   width: 358px;
@@ -1042,10 +1042,12 @@ button {
   opacity: 0;
   pointer-events: none;
 }
+
 .backdrop.is-hidden .modal {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.7);
 }
+
 .modal {
   position: absolute;
   position: relative;
@@ -1070,17 +1072,21 @@ button {
   transition: transform 250ms var(--timing-function),
     opacity 250ms var(--timing-function);
 }
+
 .modal-title {
   display: block;
   margin-bottom: 28px;
   text-align: center;
 }
+
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--primary-text-color);
 }
+
 .form-field {
   position: relative;
   width: 448px;
@@ -1121,7 +1127,7 @@ button {
   display: inline-block;
   position: absolute;
   top: 50%;
-  left: 18px;
+  left: 16px;
   fill: var(--primary-black-color);
   transform: translateY(-50%);
   transition: fill 250ms var(--timing-function);
@@ -1129,19 +1135,18 @@ button {
 
 .form-field:focus-within > .form-label {
   color: var(--accent-color);
-  transform: translate(-25px, -250%);
+  transform: translate(-25px, calc(-50% - 32px));
 }
-.form-field:focus-within > .icon-modal {
+
+.form-field:focus-within > .icon-modal,
+.form-input:not(:placeholder-shown) ~ .icon-modal,
+.form-input:focus ~ .icon-modal {
   fill: var(--accent-color);
 }
 
 .form-input:not(:placeholder-shown) + .form-label {
   color: var(--accent-color);
-  transform: translate(-25px, -250%);
-}
-.form-input:not(:placeholder-shown) ~ .icon-modal,
-.form-input:focus ~ .icon-modal {
-  fill: var(--accent-color);
+  transform: translate(-25px, calc(-50% - 32px));
 }
 
 .comment-field {
@@ -1154,52 +1159,102 @@ button {
   line-height: 1.14;
   letter-spacing: 0.01em;
 }
+
 .comment-input {
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 18px;
+  padding-left: 16px;
   padding-right: 16px;
   border: 1px solid var(--form-border-color);
   border-radius: 4px;
   transition: border-color 250ms var(--timing-function);
 }
+
+.comment-input:focus {
+  border-color: var(--accent-color);
+}
+
 .comment-label {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 12px;
   left: 18px;
   color: var(--primary-text-color);
-  transform: translateY(-260%);
   transition: transform 250ms var(--timing-function),
     color 250ms var(--timing-function);
 }
-.comment-field:focus-within > .comment-label {
+
+.comment-field:focus-within > .comment-label,
+.comment-input:not(:placeholder-shown) + .comment-label {
   color: var(--accent-color);
-  transform: translateY(-460%);
+  transform: translateY(-31px);
 }
+
 .policy {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-align: center;
 }
+
 .checkbox {
-  margin-right: 8px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+.icon-modal-checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid var(--primary-black-color);
+  border-radius: 2px;
+  transition: border-color 250ms var(--timing-function),
+    background-image 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+
+.checkbox:checked + .icon-modal-checkbox {
+  border-color: var(--accent-color);
+  background-image: url(../images/svg/checkbox.svg);
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.policy-agreement {
+  color: var(--accent-color);
+}
+
+.policy-agreement:active,
+.policy-agreement:visited {
+  color: #800080;
+}
+
 .form .button {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .button-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -9px;
+  right: -9px;
   width: 30px;
   height: 30px;
   padding: 0;
@@ -1207,6 +1262,7 @@ button {
   border-radius: 50%;
   box-shadow: var(--btn-close-shadow);
 }
+
 .icon-modal-close {
   fill: var(--icon-modal-close-color);
 }
