@@ -1267,7 +1267,6 @@ button {
   border-radius: 50%;
   box-shadow: var(--btn-close-shadow);
   outline-color: var(--accent-color);
-  outline-width: 1px;
 }
 
 .icon-modal-close {
