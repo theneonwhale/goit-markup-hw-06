@@ -210,6 +210,7 @@ button {
   cursor: pointer;
   padding: 0;
   border: none;
+  outline-color: var(--accent-color);
 }
 
 .subscribe .button {
@@ -1112,6 +1113,7 @@ button {
 
 .form-input:focus {
   border-color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .form-label {
@@ -1174,6 +1176,7 @@ button {
 
 .comment-input:focus {
   border-color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .comment-label {
@@ -1263,11 +1266,8 @@ button {
   background-color: var(--bg-white-color);
   border-radius: 50%;
   box-shadow: var(--btn-close-shadow);
-}
-
-.button-close:active {
-  border: 1px solid var(--accent-color);
-  border-radius: 50%;
+  outline-color: var(--accent-color);
+  outline-width: 1px;
 }
 
 .icon-modal-close {
