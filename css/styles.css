@@ -1265,6 +1265,11 @@ button {
   box-shadow: var(--btn-close-shadow);
 }
 
+.button-close:active {
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+}
+
 .icon-modal-close {
   fill: var(--icon-modal-close-color);
 }
