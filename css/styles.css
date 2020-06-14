@@ -1231,6 +1231,7 @@ button {
   background-image: url(../images/svg/checkbox.svg);
   background-color: var(--accent-color);
   background-size: contain;
+  background-repeat: no-repeat;
   background-origin: border-box;
 }
 
