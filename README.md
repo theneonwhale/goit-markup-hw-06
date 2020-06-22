@@ -1,6 +1,8 @@
 # goit-markup-hw-06
-Homework #6 Andrii Kylymnyk
-<p>Модальное окно</p>
-<p>Форма заявки</p>
-<p>форма подписки на рассылку</p>
-<p>чекбокс</p>
+<p>Homework #6 Andrii Kylymnyk</p>
+<ul>
+  <li>модальное окно</li>
+  <li>Форма заявки</li>
+  <li>форма подписки на рассылку</li>
+  <li>чекбокс</li>
+</ul>
